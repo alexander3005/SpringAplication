@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 @Controller
 public class StudentController {
-    
+
 @Autowired
 StudentDao studentDao;
 
@@ -36,7 +36,7 @@ public String insert(@ModelAttribute Student  student){
     @RequestMapping("/edit")
     public String editStudent(ModelMap modelMap,HttpServletRequest request){
 int studentId = Integer.parseInt(request.getParameter("id"));
-        Student student = studentDao.getStudent(studentId);
+        Student student = studentDao.getById(studentId);
         modelMap.addAttribute("student",student);
         return "edit";
     }

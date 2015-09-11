@@ -10,6 +10,8 @@
 
     <context:annotation-config ></context:annotation-config>
     <context:component-scan base-package="app.student" />
+    <context:component-scan base-package="app.discipline"/>
+    <context:component-scan base-package="app.journal"></context:component-scan>
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -18,7 +20,8 @@
         <property name="password" value="root" />
     </bean>
     <bean id="StudentDao" class="app.student.dao.StudentDaoImpl" />
-
+     <bean id = "DisciplineDao" class="app.discipline.dao.DisciplineDaoImpl" />
+    <bean id = "JournalDao" class="app.journal.dao.JournalDaoImpl"></bean>
     <bean id = "viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/pages/</value>

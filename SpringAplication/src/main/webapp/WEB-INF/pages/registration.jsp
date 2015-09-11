@@ -45,7 +45,7 @@
 <b> Student | Registration Form </b>
 
 <div>
-    <form:form method="POST" action="/addStudent" modelAttribute="student">
+    <form:form method="POST" action="addStudent" modelAttribute="student">
 <table>
 
        <tr>
@@ -56,12 +56,12 @@
         <td>Second Name :</td>
         <td><form:input path="secondName" /></td>
     </tr>
-    </tr>
+
     <tr>
         <td> </td>
         <td><input type="submit" value="Save" /></td>
     </tr>
-    <tr>
+
 
 </table>
     </form:form>

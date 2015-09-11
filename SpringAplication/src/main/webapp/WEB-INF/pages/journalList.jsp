@@ -1,12 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core_1_1" %>
+
 
 <html>
 <head>
-  <title>List Student</title>
+  <title>List Journal</title>
   <style>
     body {
       font-size: 20px;
@@ -33,7 +33,7 @@
 </head>
 <body>
 <center>
-  <h3> Student List</h3>
+  <h3> Journal List</h3>
 
 
   <table border="1">
@@ -42,32 +42,41 @@
       <td class="heading">Id</td>
       <td class ="heading">Name</td>
       <td class = "heading">Second Name</td>
+      <td class = "heading">Name Discipline</td>
       <td class="heading">Edit</td>
       <td class="heading">Delete</td>
 
     </tr>
 
-    <c:forEach items="${students}" var="student">
+    <c:forEach items="${journals}" var="table">
       <tr>
         <td>
-            ${student.id}
+            ${table.journal.id}
         </td>
         <td>
-            ${student.firstName}
+            ${table.student.firstName}
         </td>
         <td>
-            ${student.secondName}
+            ${table.student.secondName}
         </td>
-        <td> <a href="edit?id=${student.id}">Edit</a></td>
-        <td> <a href="delete?id=${student.id}">Delete</a></td>
+        <td>
+            ${table.discipline.nameDiscipline}
+        </td>
+
+
+        <td> <a href="editJournal?id=${table.journal.id}">Edit</a></td>
+        <td> <a href="deleteJournal?id=${table.journal.id}">Delete</a></td>
 
       </tr>
     </c:forEach>
 
-    <td colspan="7"><a href="student">Click Here to Add Student</a></td>
+    <td colspan="7"><a href="journal">Click Here to Add Journal</a></td>
   </table>
-<p></p>
-  <a href="journalList">Journal  DataBase</a>
+  <p></p>
+  <a href="studentList">Student DataBase</a>
+  <p></p>
+  <a href="disciplineList">Discipline DataBase</a>
+  <p>
 
 </center>
 

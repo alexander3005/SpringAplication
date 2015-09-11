@@ -46,7 +46,7 @@ String sql = "Update student set first_name=?,second_name=? where id=?;";
         jdbcTemplate.update(sql,id);
 
     }
-    public Student getStudent(int id) {
+    public Student getById(int id) {
         String sql= "select * from student where student.id = " + id + " ";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         return  jdbcTemplate.query(sql, new ResultSetExtractor<Student>() {

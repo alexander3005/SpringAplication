@@ -1,15 +1,12 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-
-
-
-
+<%--
+  Created by IntelliJ IDEA.
+  User: Acer
+  Date: 10.09.2015
+  Time: 20:58
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
   <title>Student Update</title>
@@ -42,10 +39,10 @@
 
 
 
-  <b> Student | Update Form </b>
+  <b> Discipline | Update Form </b>
 
   <div>
-    <form:form method="POST" action="update" modelAttribute="student">
+    <form:form method="POST" action="updateDiscipline" modelAttribute="discipline">
       <table>
 
         <tr>
@@ -53,13 +50,8 @@
           <td><form:input readonly="true" path="id"/> </td>
         </tr>
         <tr>
-          <td>First Name :</td>
-          <td><form:input path="firstName" /></td>
-
-        </tr>
-        <tr>
-          <td>Second Name :</td>
-          <td><form:input path="secondName" /></td>
+          <td>Discipline Name :</td>
+          <td><form:input path="nameDiscipline" /></td>
         </tr>
 
         <tr>

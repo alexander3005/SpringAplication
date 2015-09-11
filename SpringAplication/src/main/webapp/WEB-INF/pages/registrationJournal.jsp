@@ -12,7 +12,7 @@
 
 <html>
 <head>
-  <title>Student Update</title>
+  <title>Journal Registration</title>
   <style>
     body {
       font-size: 20px;
@@ -42,31 +42,26 @@
 
 
 
-  <b> Student | Update Form </b>
+  <b> Journal | Registration Form </b>
 
   <div>
-    <form:form method="POST" action="update" modelAttribute="student">
+    <form:form method="POST" action="addJournal" modelAttribute="journal">
       <table>
 
         <tr>
-          <td>Id:</td>
-          <td><form:input readonly="true" path="id"/> </td>
+          <td>Student Id :</td>
+          <td><form:input path="studentId" /></td>
         </tr>
         <tr>
-          <td>First Name :</td>
-          <td><form:input path="firstName" /></td>
-
-        </tr>
-        <tr>
-          <td>Second Name :</td>
-          <td><form:input path="secondName" /></td>
+          <td> Discipline Id:</td>
+          <td><form:input path="disciplineId" /></td>
         </tr>
 
         <tr>
           <td> </td>
           <td><input type="submit" value="Save" /></td>
         </tr>
-        <tr>
+
 
       </table>
     </form:form>
